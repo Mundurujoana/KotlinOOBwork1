@@ -2,16 +2,16 @@ fun main() {
     //question1
 var carol = Human("Carol",18,45)
     println(carol.weight)
-    carol.eat(23)
+    carol.eat(5)
     println(carol.weight)
-    carol.speak("Hello")
+    carol.speak("Hey, how are you today")
     println(carol.age)
     carol.birthday()
 
     //question2
-    var joana =User("Munduru","joana","mundujoana@gmail.com","+256 753489877","joaNa252@@#")
+    var joana =User("Munduru","joana","mundujoana@gmail.com","+256753489877","joaNa252@@#")
     println(joana.email)
-    println(joana.phoneNumber)
+    println(joana.firstName)
 }
 //Create a class called Human with these attributes: name, age, weight. It has
 //the following functions:
@@ -30,7 +30,7 @@ class Human(var name:String, var age:Int, var weight:Int) {
     }
 
    fun speak(speech:String){
-       println("$speech everyone")
+       println(speech)
    }
 
     fun birthday(){
@@ -45,7 +45,7 @@ class Human(var name:String, var age:Int, var weight:Int) {
 //phoneNumber, password. Create an instance of User  and print out any 2
 //attributes
 
- class User(var firstName:String, var lastName:String, var email:String,
+data class User(var firstName:String, var lastName:String, var email:String,
 var phoneNumber:String, var password:String){
 
  }
